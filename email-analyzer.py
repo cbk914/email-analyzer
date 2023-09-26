@@ -20,8 +20,6 @@ API_KEYS = {
     'OPENWEATHERMAP': os.getenv("OPENWEATHERMAP_API_KEY")
 }
 
-
-
 def make_api_request(service, query):
     if not API_KEYS.get(service):
         print(f"Skipping {service} as API key is not provided.")
@@ -123,6 +121,5 @@ def main():
             ipinfo_data = make_api_request('IPINFO', ip_from_spf)
         
         print(html_summary)
-
 if __name__ == "__main__":
     main()
